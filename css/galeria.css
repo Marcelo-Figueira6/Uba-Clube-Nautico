@@ -1,0 +1,91 @@
+/* CSS Específico para pages/galeria.html */
+
+.gallery-section {
+    padding-bottom: 3rem;
+}
+
+.gallery-filters {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.btn-filter {
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    border: 1px solid #ccc;
+    padding: 0.6rem 1.2rem;
+    margin: 0.3rem;
+    cursor: pointer;
+    border-radius: 20px; /* Pill shape */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.btn-filter:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+    transform: none; /* Override default btn hover */
+    box-shadow: none; /* Override default btn hover */
+}
+
+.btn-filter.active {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    border-color: var(--cor-principal);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images nicely */
+    transition: transform var(--transition-speed) ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 19, 43, 0.7); /* Dark overlay */
+    color: var(--cor-texto-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+/* Hide items not matching filter (JS will add/remove .hide) */
+.gallery-item.hide {
+    display: none;
+}
+

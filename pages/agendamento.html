@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Ubá Clube Náutico</title>
+    <link rel="icon" href="../images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/agendamento.css"> 
+</head>
+<body>
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html#inicio"><img src="../images/logo.png" alt="Ubá Clube Náutico Logo" style="height: 50px;"></a>
+            </div>
+            <nav class="main-nav">
+                 <ul>
+                    <li><a href="../index.html#inicio">Início</a></li>
+                    <li><a href="../index.html#rotas">Rotas</a></li>
+                    <li><a href="../index.html#galeria">Galeria</a></li>
+                    <li><a href="../index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="../index.html#contato">Contato</a></li>
+                    <li><a href="agendamento.html" class="active">Agendamento</a></li> 
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main class="page-padding">
+        <section id="agendamento-content" class="container section-padding">
+            <h2>Agende Sua Aventura</h2>
+            <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">Selecione a data, a rota desejada e preencha suas informações para reservar sua experiência com o Ubá Clube Náutico.</p>
+
+            <div class="agendamento-container">
+                <div class="agendamento-calendario">
+                    <h3>Escolha a Data</h3>
+                    <div class="calendar-placeholder" style="height: 300px; background-color: #e9ecef; display: flex; align-items: center; justify-content: center; color: #888; margin-bottom: 1.5rem; border-radius: 5px;">
+                        [Calendário Interativo Aqui]
+                    </div>
+                    <p>Selecione uma data disponível no calendário acima.</p>
+                </div>
+
+                <div class="agendamento-form">
+                    <h3>Detalhes da Reserva</h3>
+                    <form id="booking-form" action="#" method="post"> 
+                        <div class="form-group">
+                            <label for="data-selecionada">Data Selecionada:</label>
+                            <input type="text" id="data-selecionada" name="data_selecionada" readonly required style="background-color: #eee;">
+                        </div>
+                        <div class="form-group">
+                            <label for="rota">Escolha a Rota:</label>
+                            <select id="rota" name="rota" required>
+                                <option value="" disabled selected>Selecione...</option>
+                                <option value="guama">Remada ao Nascer do Sol - Rio Guamá</option>
+                                <option value="combu">Expedição Ilha do Combu</option>
+                                <option value="travessia">Travessia Amazônica</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="participantes">Número de Participantes:</label>
+                            <input type="number" id="participantes" name="participantes" min="1" max="10" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nome-reserva">Nome Completo:</label>
+                            <input type="text" id="nome-reserva" name="nome_reserva" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-reserva">Email:</label>
+                            <input type="email" id="email-reserva" name="email_reserva" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone-reserva">Telefone (WhatsApp):</label>
+                            <input type="tel" id="telefone-reserva" name="telefone_reserva">
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações:</label>
+                            <textarea id="observacoes" name="observacoes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Confirmar Pré-Reserva</button>
+                    </form>
+                     <div id="booking-status"></div> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ubá Clube Náutico. Todos os direitos reservados.</p>
+             <p>Contato: (91) 99125-0505 | Av. Bernado Sayão, 5232 - Marine Club (Ao lado do Portão da UFPA), Belém, Brazil</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script> 
+    <script src="../js/agendamento.js"></script> 
+</body>
+</html>

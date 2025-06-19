@@ -1,0 +1,185 @@
+.agendamento-section {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 2.5rem;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.event-list-container h2,
+.booking-form-container h2 {
+    color: var(--cor-principal);
+    margin-bottom: 1.5rem;
+}
+
+#event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid var(--cor-principal);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+    transition: box-shadow 0.3s ease;
+}
+
+.event-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-item.selected {
+    border-left-color: var(--cor-destaque);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.event-info h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--cor-secundaria);
+}
+
+.event-info p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.event-info p strong {
+    color: var(--cor-texto);
+}
+
+.btn-select-event {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    margin-top: 1rem; 
+}
+
+.btn-select-event:hover {
+    background-color: #008a6e;
+}
+
+.event-item.selected .btn-select-event {
+    background-color: var(--cor-destaque);
+    cursor: default;
+}
+
+.event-item.selected .btn-select-event:hover {
+    background-color: var(--cor-destaque);
+}
+
+.booking-form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#booking-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+#booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    font-size: 0.95rem;
+}
+
+#booking-form input[type="text"],
+#booking-form input[type="email"],
+#booking-form input[type="tel"],
+#booking-form input[type="number"],
+#booking-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--fonte-corpo);
+}
+
+#booking-form input[readonly] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+#booking-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.btn-submit-booking {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    background-color: var(--cor-destaque);
+}
+
+.btn-submit-booking:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.btn-submit-booking:disabled:hover {
+    background-color: #cccccc;
+}
+
+.booking-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.booking-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.booking-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (min-width: 992px) {
+    .agendamento-section {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .btn-select-event {
+        margin-top: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .event-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-select-event {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+    }
+}
+

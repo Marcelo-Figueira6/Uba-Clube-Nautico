@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubá Clube Náutico - Aventura na Amazônia (SPA)</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll-reveal.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/rotas.css">
+    <link rel="stylesheet" href="css/sobre.css"> 
+    <link rel="stylesheet" href="css/contato.css"> 
+    <!-- Adicionar link para biblioteca de ícones (ex: FontAwesome) se usar -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+</head>
+<body>
+    <header id="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#inicio"><img src="images/logo.png" alt="Ubá Clube Náutico Logo" style="height: 50px;"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#rotas">Rotas</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="pages/agendamento.html">Agendamento</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-background-image"></div>
+            <div class="hero-content container">
+                <h1>Explore a Amazônia de Canoa</h1>
+                <p>Aventura, natureza e comunidade no coração da floresta.</p>
+                <div class="hero-cta">
+                    <a href="pages/agendamento.html" class="btn btn-primary">Agende sua Aventura</a>
+                    <a href="#rotas" class="btn btn-secondary">Descubra Nossas Rotas</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="rotas" class="container section-padding reveal">
+            <h2>Nossas Rotas e Expedições</h2>
+            <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">Descubra os caminhos que levam à aventura na Amazônia. Oferecemos desde passeios tranquilos a expedições desafiadoras.</p>
+            <div class="rotas-grid">
+                <div class="rota-card reveal">
+                    <img src="images/canoa-rio-floresta.jpeg" alt="Remada no Rio Guamá" class="rota-card-img">
+                    <div class="rota-card-content">
+                        <h3>Remada ao Nascer do Sol - Rio Guamá</h3>
+                        <p>Uma experiência mágica para começar o dia, remando pelas águas calmas enquanto o sol nasce sobre a floresta.</p>
+                        <div class="rota-card-details">
+                            <span><i class="icon-time"></i> ~2 horas</span>
+                            <span><i class="icon-level"></i> Iniciante</span>
+                        </div>
+                        <a href="#contato" class="btn btn-primary btn-small">Consultar</a>
+                    </div>
+                </div>
+                <div class="rota-card reveal">
+                    <img src="images/canoa-vermelha-floresta.jpeg" alt="Expedição Ilha do Combu" class="rota-card-img">
+                    <div class="rota-card-content">
+                        <h3>Expedição Ilha do Combu</h3>
+                        <p>Explore os furos e igarapés da Ilha do Combu, conhecendo a cultura ribeirinha e a produção local de cacau e açaí.</p>
+                         <div class="rota-card-details">
+                            <span><i class="icon-time"></i> ~4 horas</span>
+                            <span><i class="icon-level"></i> Intermediário</span>
+                        </div>
+                        <a href="#contato" class="btn btn-primary btn-small">Consultar</a>
+                    </div>
+                </div>
+                 <div class="rota-card reveal">
+                    <img src="images/canoa-rio-ceu-azul.jpeg" alt="Travessia Amazônica" class="rota-card-img">
+                    <div class="rota-card-content">
+                        <h3>Travessia Amazônica</h3>
+                        <p>Uma aventura mais longa para os experientes, explorando trechos remotos e acampando às margens do rio.</p>
+                         <div class="rota-card-details">
+                            <span><i class="icon-time"></i> 2+ dias</span>
+                            <span><i class="icon-level"></i> Avançado</span>
+                        </div>
+                        <a href="#contato" class="btn btn-primary btn-small">Consultar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-padding reveal" style="background-color: #f0fdf4;">
+            <div class="container">
+                <h2>Galeria de Momentos</h2>
+                <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">Explore as imagens que capturam a beleza da Amazônia e a energia do Ubá Clube Náutico.</p>
+                <div class="gallery-filters reveal" style="margin-bottom: 2rem; text-align: center;">
+                    <button class="btn btn-filter active" data-filter="all">Todos</button>
+                    <button class="btn btn-filter" data-filter="expedicoes">Expedições</button>
+                    <button class="btn btn-filter" data-filter="eventos">Eventos</button>
+                    <button class="btn btn-filter" data-filter="paisagens">Paisagens</button>
+                </div>
+                <div class="gallery-grid reveal">
+                     <div class="gallery-item" data-category="expedicoes">
+                        <a href="images/canoa-vermelha-floresta.jpeg" data-lightbox="gallery" data-title="Remando na floresta">
+                            <img src="images/canoa-vermelha-floresta.jpeg" alt="Canoa vermelha em rio cercado por floresta">
+                            <div class="gallery-item-overlay"><span><i class="icon-zoom"></i> Ver Imagem</span></div>
+                        </a>
+                    </div>
+                    <div class="gallery-item" data-category="paisagens">
+                         <a href="images/canoa-rio-floresta.jpeg" data-lightbox="gallery" data-title="Canoa em rio estreito">
+                            <img src="images/canoa-rio-floresta.jpeg" alt="Vista de dentro de canoa em rio estreito com árvores">
+                            <div class="gallery-item-overlay"><span><i class="icon-zoom"></i> Ver Imagem</span></div>
+                        </a>
+                    </div>
+                     <div class="gallery-item" data-category="eventos">
+                         <a href="images/mulher-barco-rio.jpeg" data-lightbox="gallery" data-title="Passeio de barco">
+                            <img src="images/mulher-barco-rio.jpeg" alt="Mulher em barco de madeira em rio">
+                            <div class="gallery-item-overlay"><span><i class="icon-zoom"></i> Ver Imagem</span></div>
+                        </a>
+                    </div>
+                     <div class="gallery-item" data-category="expedicoes">
+                         <a href="images/canoa-rio-ceu-azul.jpeg" data-lightbox="gallery" data-title="Canoa no rio">
+                            <img src="images/canoa-rio-ceu-azul.jpeg" alt="Canoa azul em rio largo com céu azul">
+                            <div class="gallery-item-overlay"><span><i class="icon-zoom"></i> Ver Imagem</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="container section-padding reveal">
+            <h2>Nossa História e Valores</h2>
+             <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">Conheça a trajetória e os princípios que nos guiam.</p>
+            <div class="sobre-container">
+                <div class="sobre-texto">
+                    <p>O Ubá Clube Náutico nasceu da paixão pela canoagem e pelo desejo de compartilhar as maravilhas da Amazônia de uma forma única e respeitosa. Somos mais que um clube, somos uma comunidade unida pela aventura e pelo amor à natureza.</p>
+                    <p>Nossa base está localizada estrategicamente às margens do rio, proporcionando acesso fácil a rotas incríveis e paisagens deslumbrantes.</p>
+                </div>
+                <div class="sobre-accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h4>Nossa Missão</h4>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Promover a conexão das pessoas com a natureza amazônica através da canoagem, incentivando a aventura segura, o respeito ao meio ambiente e o fortalecimento da comunidade local.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h4>Nossa Visão</h4>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Ser referência em ecoturismo de canoagem na Amazônia, reconhecidos pela qualidade das experiências, pelo compromisso com a sustentabilidade e pelo impacto positivo na comunidade.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false">
+                            <h4>Nossos Valores</h4>
+                            <span class="accordion-icon">+</span>
+                        </button>
+                        <div class="accordion-content">
+                            <p><strong>Aventura com Segurança:</strong> Priorizamos a segurança em todas as nossas atividades.<br>
+                            <strong>Respeito à Natureza:</strong> Comprometidos com a preservação ambiental.<br>
+                            <strong>Comunidade:</strong> Valorizamos as relações e o apoio mútuo.<br>
+                            <strong>Autenticidade:</strong> Oferecemos experiências genuínas e conectadas à cultura local.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="section-padding reveal" style="background-color: #f0fdf4;">
+             <div class="container">
+                <h2>Entre em Contato</h2>
+                <p style="text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 2.5rem;">Fale conosco para dúvidas, sugestões ou agendamentos. Responderemos o mais breve possível!</p>
+                <div class="contato-container">
+                    <div class="contato-form">
+                        <form id="contact-form" action="#" method="post"> 
+                            <div class="form-group">
+                                <label for="nome">Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="assunto">Assunto:</label>
+                                <input type="text" id="assunto" name="assunto">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem:</label>
+                                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                        </form>
+                        <div id="form-status"></div>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Informações de Contato</h4>
+                        <p><i class="icon-phone"></i> (91) 99125-0505</p>
+                        <p><i class="icon-location"></i> Av. Bernado Sayão, 5232 - Marine Club (Ao lado do Portão da UFPA), Belém, Brazil</p>
+                        <p><i class="icon-email"></i> contato@ubaclubenautico.com (Placeholder)</p>
+                        <h4>Horário de Funcionamento</h4>
+                        <p>Terça a Domingo: 8:00 - 18:00</p>
+                        <div class="map-placeholder" style="height: 200px; background-color: #ddd; display: flex; align-items: center; justify-content: center; color: #888; margin-top: 1rem; border-radius: 5px;">
+                            [Mapa Interativo Aqui]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Ubá Clube Náutico. Todos os direitos reservados.</p>
+            <p>Contato: (91) 99125-0505 | Av. Bernado Sayão, 5232 - Marine Club (Ao lado do Portão da UFPA), Belém, Brazil</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Instagram"><i class="icon-instagram"></i></a>
+                <a href="#" target="_blank" aria-label="Facebook"><i class="icon-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/galeria.js"></script>
+    <script src="js/sobre.js"></script> 
+    <script src="js/contato.js"></script> 
+</body>
+</html>

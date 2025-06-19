@@ -1,0 +1,92 @@
+/* CSS Específico para a seção #rotas */
+
+.rotas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.rota-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 168, 120, 0.1); /* Sombra suave com cor principal */
+    transition: transform var(--transition-speed) var(--transition-timing), box-shadow var(--transition-speed) var(--transition-timing);
+    display: flex;
+    flex-direction: column;
+}
+
+.rota-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 168, 120, 0.15);
+}
+
+.rota-card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform var(--transition-speed) var(--transition-timing);
+}
+
+.rota-card:hover .rota-card-img {
+    transform: scale(1.05);
+}
+
+.rota-card-content {
+    padding: 1.5rem;
+    flex-grow: 1; /* Faz o conteúdo ocupar espaço */
+    display: flex;
+    flex-direction: column;
+}
+
+.rota-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    color: var(--cor-fundo-escuro); /* Título da rota em cor escura */
+}
+
+.rota-card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    flex-grow: 1; /* Empurra detalhes e botão para baixo */
+}
+
+.rota-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #777;
+    border-top: 1px solid var(--cor-borda-suave);
+    padding-top: 0.8rem;
+    margin-top: auto; /* Empurra para o final do card */
+    margin-bottom: 1rem;
+}
+
+.rota-card-details span {
+    display: flex;
+    align-items: center;
+}
+
+.rota-card-details i {
+    margin-right: 0.4rem;
+    color: var(--cor-principal); /* Ícones em verde */
+    font-size: 1.1rem; /* Ajustar se usar biblioteca de ícones */
+}
+
+.btn-small {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    align-self: flex-start; /* Alinha botão à esquerda */
+}
+
+/* Placeholder para ícones - substituir por classes reais (ex: FontAwesome) */
+.icon-time::before { content: "⏰"; }
+.icon-level::before { content: "📊"; }
+.icon-zoom::before { content: "🔍"; }
+.icon-instagram::before { content: "📷"; } /* Exemplo */
+.icon-facebook::before { content: "👍"; } /* Exemplo */
+
